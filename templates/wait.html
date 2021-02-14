@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}处理等待{% endblock %}
+{% block content %}
+    <div style="text-align: center">
+        <button>10秒后才能点击到我</button>
+    </div>
+{% endblock %}
+{% block javascript %}
+    window.onload = function () {
+        simulateLoading(10)
+    }
+{% endblock %}

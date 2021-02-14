@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}操作JavaScript{% endblock %}
+{% block content %}
+    <div style="text-align: center">
+        <p>
+            <button onclick="alert('Alert对话框！')">Alert对话框</button>
+        </p>
+        <p>
+            <button onclick="confirm('Confirm对话框！')">Confirm对话框</button>
+        </p>
+        <p>
+            <button onclick="prompt('Prompt对话框！', '请输入...')">Prompt对话框</button>
+        </p>
+    </div>
+{% endblock %}

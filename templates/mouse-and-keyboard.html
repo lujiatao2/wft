@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}鼠标和键盘事件{% endblock %}
+{% block css %}
+        nav {
+            padding-bottom: 10rem;
+            text-align: center
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0
+        }
+
+        nav ul li {
+            border-right: 1px solid white;
+            float: left;
+            width: 10rem
+        }
+
+        nav ul li a {
+            color: white;
+            display: block;
+            font-weight: bold;
+            padding: 5px;
+            text-decoration: none
+        }
+
+        nav ul li a:link, nav ul li a:visited {
+            background-color: gray
+        }
+
+        nav ul li a:hover, nav ul li a:active {
+            background-color: lightgray
+        }
+
+        nav ul ul {
+            display: none
+        }
+
+        nav ul li:hover ul {
+            display: block
+        }
+{% endblock %}
+{% block content %}
+    <h2>鼠标事件</h2>
+    <nav>
+        <ul>
+            <li><a href="">手机</a>
+                <ul>
+                    <li><a href="mouse-and-keyboard/手机/三星">三星</a></li>
+                    <li><a href="mouse-and-keyboard/手机/苹果">苹果</a></li>
+                    <li><a href="mouse-and-keyboard/手机/华为">华为</a></li>
+                    <li><a href="mouse-and-keyboard/手机/小米">小米</a></li>
+                </ul>
+            </li>
+            <li><a href="">电脑</a>
+                <ul>
+                    <li><a href="mouse-and-keyboard/电脑/联想">联想</a></li>
+                    <li><a href="mouse-and-keyboard/电脑/苹果">苹果</a></li>
+                    <li><a href="mouse-and-keyboard/电脑/惠普">惠普</a></li>
+                    <li><a href="mouse-and-keyboard/电脑/戴尔">戴尔</a></li>
+                </ul>
+            </li>
+            <li><a href="">其他</a>
+                <ul>
+                    <li><a href="mouse-and-keyboard/其他/手表">手表</a></li>
+                    <li><a href="mouse-and-keyboard/其他/手环">手环</a></li>
+                    <li><a href="mouse-and-keyboard/其他/VR">VR</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+    <h2>键盘事件</h2>
+    <p>常用的Python单元测试框架有：
+        <span style="color: gray; font-style: italic">unittest、doctest、pytest和nose</span>
+    </p>
+    <label>常用的Python单元测试框架有哪些？
+        <input/>
+    </label>
+{% endblock %}

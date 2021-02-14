@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        #loading {
+            background-color: black;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5
+        }
+
+        #loading img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin-top: -50px;
+            margin-left: -50px
+        }
+
+        h1, h2 {
+            text-align: center
+        }
+
+        {#留给子页面添加CSS代码#}
+        {% block css %}{% endblock %}
+    </style>
+</head>
+<body>
+{% block content %}{% endblock %}
+<div id="loading">
+    <img alt="加载中" src="{% static "img/loading.gif" %}"/>
+</div>
+<script>
+    const loading = document.getElementById('loading');
+
+    simulateLoading = function (seconds) {
+        startLoading();
+        setTimeout('stopLoading()', seconds * 1000)
+    }
+
+    startLoading = function () {
+        loading.style.display = 'inline';
+    }
+
+    stopLoading = function () {
+        loading.style.display = 'none';
+    }
+
+    {#留给子页面添加JavaScript代码#}
+    {% block javascript %}{% endblock %}
+</script>
+</body>
+</html>

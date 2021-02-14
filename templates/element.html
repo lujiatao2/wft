@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block title %}操作元素{% endblock %}
+{% block css %}
+        table {
+            margin: auto;
+            text-align: center;
+            width: 50%
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 5px
+        }
+
+        table, tr, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 5px
+        }
+{% endblock %}
+{% block content %}
+    <h2>表单</h2>
+    <form>
+        <p>
+            <label>用户名：
+                <input type="text" id="username" name="username" placeholder="请输入用户名..."/>
+            </label>
+        </p>
+        <p>
+            <label>密码：
+                <input type="password" name="password" placeholder="请输入密码..."/>
+            </label>
+        </p>
+        <p>
+            <label>重复密码：
+                <input type="password" name="repeat-password" placeholder="请再次输入密码..."/>
+            </label>
+        </p>
+        <p>
+            性别：
+            <label>男
+                <input type="radio" name="radio" value="male" checked/>
+            </label>
+            &nbsp;&nbsp;
+            <label>女
+                <input type="radio" name="radio" value="female"/>
+            </label>
+        </p>
+        <label>
+            生日：
+            <input type="date">
+        </label>
+        <p>
+            <label>
+                最喜欢的编程语言：
+                <select>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            技能栈：
+            <label>后端
+                <input type="checkbox" name="checkbox[]" value="back-end" checked/>
+            </label>
+            &nbsp;&nbsp;
+            <label>Web
+                <input type="checkbox" name="checkbox[]" value="web"/>
+            </label>
+            &nbsp;&nbsp;
+            <label>App
+                <input type="checkbox" name="checkbox[]" value="app"/>
+            </label>
+        </p>
+        <p>
+            <label>
+                爱好：
+                <select multiple>
+                    <option value="shopping">逛街</option>
+                    <option value="film">电影</option>
+                    <option value="music">音乐</option>
+                    <option value="music">运动</option>
+                    <option value="music">其他</option>
+                </select>
+            </label>
+        </p>
+        <label>备注：
+            <textarea id="textarea" name="textarea" rows="10" cols="50"></textarea>
+        </label>
+        <p>
+            <input type="submit">
+            <input type="reset">
+        </p>
+    </form>
+    <hr>
+    <h2>列表</h2>
+    <h3>1. 有序列表</h3>
+    <ol>
+        <li>单元测试</li>
+        <li>集成测试</li>
+        <li>系统测试</li>
+    </ol>
+    <h3>2. 无序列表</h3>
+    <ul>
+        <li>自动化测试</li>
+        <li>性能测试</li>
+        <li>安全测试</li>
+    </ul>
+    <hr>
+    <h2>表格</h2>
+    <table style="">
+        <caption>用户信息</caption>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>用户名</th>
+            <th>密码</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>张三</td>
+            <td>zhangsan</td>
+            <td>zhangsan123456</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>lisi</td>
+            <td>lisi123456</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>wangwu</td>
+            <td>wangwu123456</td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>内联框架</h2>
+    <div style="text-align: center">
+        <iframe src="https://www.baidu.com/" style="width: 50%"></iframe>
+    </div>
+{% endblock %}
